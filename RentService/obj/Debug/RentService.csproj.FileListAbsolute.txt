@@ -1,0 +1,12 @@
+c:\users\denis\documents\visual studio 2015\Projects\RentService\RentService\bin\RentService.dll.config
+c:\users\denis\documents\visual studio 2015\Projects\RentService\RentService\bin\RentService.dll
+c:\users\denis\documents\visual studio 2015\Projects\RentService\RentService\bin\RentService.pdb
+c:\users\denis\documents\visual studio 2015\Projects\RentService\RentService\obj\Debug\RentService.dll
+c:\users\denis\documents\visual studio 2015\Projects\RentService\RentService\obj\Debug\RentService.pdb
+C:\Users\Denis\Documents\Visual Studio 2015\Projects\RentService\RentService\obj\Debug\RentService.csprojResolveAssemblyReference.cache
+C:\Programming\RentService\RentService\obj\Debug\RentService.csprojResolveAssemblyReference.cache
+C:\Programming\RentService\RentService\obj\Debug\RentService.dll
+C:\Programming\RentService\RentService\obj\Debug\RentService.pdb
+C:\Programming\RentService\RentService\bin\RentService.dll.config
+C:\Programming\RentService\RentService\bin\RentService.dll
+C:\Programming\RentService\RentService\bin\RentService.pdb

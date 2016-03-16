@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html ng-app="postScreenApp">
+<head>
+    <meta charset="utf-8" />
+
+    <!--<script src="lib/angular.min.js"></script>-->
+    <script src="lib/jquery-1.11.3.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/modernizr.js"></script>
+    <link href="lib/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/bootstrap-theme.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <script src="client_validation/jquery.validate.js"></script>
+    <script src="client_validation/additional-methods.min.js"></script>
+    <link href="client_validation/screen.css" rel="stylesheet" />
+
+    <!--<script src="js/add_ad_angular.js"></script>-->
+    <script src="js/add_ad_valid.js"></script>
+    <script src="js/add_ad.js"></script>
+
+    <link href="css/add_ad.css" rel="stylesheet" />
+    <link href="css/add_ad_media.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/main_media.css" rel="stylesheet" />
+    <script src="js/main.js"></script>
+    <title>Rent Ad</title>     
+</head>
+
+<body ng-controller="postScreenCtrl">
+  
+    <header role="banner">
+        <div id="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div>
+        <nav class="main-nav">
+            <ul>
+                <!-- inser more links here -->
+                <li><a class="cd-signin" href="#0">Sign in</a></li>
+                <li><a class="cd-signup" href="#0">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="cd-user-modal">
+        <!-- entire modal form, including the background -->
+        <div class="cd-user-modal-container">
+            <!--container wrapper -->
+            <ul class="cd-switcher">
+                <li><a href="#0">Sign in</a></li>
+                <li><a href="#0">New account</a></li>
+            </ul>
+            <div id="cd-login">
+                <!-- log in form -->
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                        <input class="full-width has-padding has-border"
+                               id="signin-email"
+                               type="email" placeholder="E-mail">
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signin-password">Password</label>
+                        <input class="full-width has-padding has-border"
+                               id="signin-password"
+                               type="text" placeholder="Password">
+                        <a href="#0" class="hide-password">Hide</a>
+                    </p>
+                    <p class="fieldset">
+                        <input type="checkbox" id="remember-me" checked>
+                        <label for="remember-me">Remember me</label>
+                    </p>
+                    <p class="fieldset">
+                        <input class="full-width" type="submit" value="Login">
+                    </p>
+                </form>
+
+                <p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+                <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div> <!-- cd-login -->
+            <div id="cd-signup">
+                <!-- sign up form -->
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-username" for="signup-username">Username</label>
+                        <input class="full-width has-padding has-border"
+                               id="signup-username"
+                               type="text" placeholder="Username">
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                        <input class="full-width has-padding has-border"
+                               id="signup-email"
+                               type="email" placeholder="E-mail">
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signup-password">Password</label>
+                        <input class="full-width has-padding has-border"
+                               id="signup-password"
+                               type="text" placeholder="Password">
+                        <a href="#0" class="hide-password">Hide</a>
+                    </p>
+                    <p class="fieldset">
+                        <input type="checkbox" id="accept-terms">
+                        <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+                    </p>
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Create account">
+                    </p>
+                </form>
+                <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div> <!-- cd-signup -->
+            <div id="cd-reset-password">
+                <!-- reset password form -->
+                <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                        <input class="full-width has-padding has-border"
+                               id="reset-email"
+                               type="email" placeholder="E-mail">
+                    </p>
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Reset password">
+                    </p>
+                </form>
+                <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+            </div> <!-- cd-reset-password -->
+            <a href="#0" class="cd-close-form">Close</a>
+        </div> <!-- cd-user-modal-container -->
+    </div> <!-- cd-user-modal -->
+
+            <!--Right Side Nav Bar (Pills)-->
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <ul class="nav nav-pills nav-stacked ad_pills">
+                        <li role="presentation" id="basicPill" class="active" style="margin:5px;"><a href="#"><span></span> Start with Basic Info</a></li>
+                        <li role="presentation" id="descPill" style="margin:5px;"><a href="#"><span></span> Don't Forget to Describe</a></li>
+                        <li role="presentation" id="rentPill" style="margin:5px;"><a href="#"><span></span> Let's Add Some Rent Info</a></li>
+                        <li role="presentation" id="reachPill" style="margin:5px;"><a href="#"><span></span> How People Should Reach You</a></li>
+                    </ul>
+                </div>
+
+                <!--Add New Ad Form-->
+
+                <div class="col-md-6 col-sm-6" id="AddNewAdCont">
+                    <form class="form-horisontal ad_form" method="post">
+                        <div id="basicInfo">
+                            <input required
+                                   id="txtItemName" name="txtItemName"
+                                   class="form-control ad_input"
+                                   type="text" placeholder="Name Your Item" ng-model="ad.ItemName"
+                                   minlength="2" />
+                            
+
+                            <input required
+                                   id="txtCity" name="txtCity"
+                                   class="form-control ad_input"
+                                   type="text" placeholder="City" ng-model="ad.City"
+                                   minlength="2" />
+                           
+                            <button class="btn ad_btn" id="basicNext" type="button">Next</button>
+
+                        </div>
+
+                        <div id="descInfo">
+                            <textarea id="txtDesc"
+                                      class="form-control ad_input" rows="3" cols="20" placeholder="Description" ng-model="ad.Description"></textarea>
+                            <button class="btn ad_btn" id="descNext" type="button">Next</button>
+                        </div>
+
+                        <div id="rentInfo">
+                            <input required
+                                   id="txtStartRentDate" 
+                                   class="form-control ad_input" name="txtStartRentDate"
+                                   type="date" placeholder="Start Rent Date" ng-model="ad.StartRentDate" />
+                            
+                            <input required
+                                   id="txtFinishRentDate" 
+                                   class="form-control ad_input" name="txtFinishRentDate"
+                                   type="date" placeholder="Finish Rent Date" ng-model="ad.FinishRentDate" />
+                            
+
+                            <label class="sr-only" for="txtDailyRentPrice">Amount (in Shekels)</label>
+                            <input required
+                                   type="number"
+                                   min="0"
+                                   class="ad_input inp_num"
+                                   id="txtDailyRentPrice"
+                                   name="txtDailyRentPrice" placeholder="Daily Rent Price in Shekels" />
+                            
+
+                            <label class="sr-only" for="txtWeeklyRentPrice">Amount (in Shelels)</label>
+                            <input required
+                                   type="number"
+                                   class="inp_num ad_input" id="txtWeeklyRentPrice" name="txtWeeklyRentPrice"
+                                   min="0"
+                                   placeholder="Weekly Rent Price in Shelels">
+                            
+
+                            <label class="sr-only" for="txtMonthlyRentPrice">Amount (in Shelels)</label>
+                            <input required
+                                   type="number"
+                                   class="inp_num ad_input" id="txtMonthlyRentPrice" name="txtMonthlyRentPrice"
+                                   min="0"
+                                   placeholder="Monthly Rent Price in Shelels">
+                            
+
+                            <button class="btn ad_btn" id="rentNext" type="button">Next</button>
+                        </div>
+
+                        <div id="reachInfo">
+                            <input required
+                                   minlength="2"
+                                   id="txtOwnerName" class="form-control ad_input" name="txtOwnerName"
+                                   type="text" placeholder="Owner Name" ng-model="ad.OwnerName" /> 
+
+                            <label class="sr-only" for="txtPhoneNumber">Mobile Phone Number</label>
+                            <input required
+                                   id="txtPhoneNumber" 
+                                   name="txtPhoneNumber" 
+                                   class="form-control ad_input"
+                                   type="text" placeholder="Phone Number" ng-model="ad.PhoneNumber" /> 
+
+                            <!--<input id="txtEmail" class="form-control" type="email" placeholder="Valid Email" ng-model="ad.Email" />-->
+                            
+
+                            <div class="container-fluid p0">
+                                <div class="row">
+                                    <div class="col-md-4 captcha_col">
+                                        <img id="captchaHolder" />
+                                    </div>
+                                    <div class="col-md-4 qq">
+                                        <input id="txtUserValue" class="form-control ad_input" type="text" placeholder="Captcha Here"/>
+                                    </div>                                    
+                                    <div class="col-md-4">
+                                        <div class="btn_captcha">
+                                            <input id="btnSubmit" class="btn btn-block ad_btn" type="button" value="Submit" />
+                                            <input id="btnReCaptcha" class="btn btn-block ad_btn" type="button" value="Refresh" />
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li id="captchaError" style="visibility:hidden; justify-content:center;"></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button type="submit" id="btnInsert" class="btn btn-group-justified disabled" ng-click="send()">
+                                Finish Posting
+                            </button>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <!--<script src="lib/angular.min.js"></script>-->
+    <script src="lib/jquery-1.11.3.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/modernizr.js"></script>
+    <link href="lib/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/bootstrap-theme.css" rel="stylesheet" />
+   
+    <script src="client_validation/jquery.validate.js"></script>
+    <script src="client_validation/additional-methods.min.js"></script>
+    <link href="client_validation/screen.css" rel="stylesheet" />
+
+
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/main_media.css" rel="stylesheet" />
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+
+    <title>Rent Service</title>
+</head>
+<body>
+    <header role="banner">
+        <div id="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div>
+        <nav class="main-nav">
+            <ul>
+                <!-- links here -->
+                <li><a class="cd-signin" href="#0">Sign in</a></li>
+                <li><a class="cd-signup" href="#0">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cd-user-modal">
+        <!-- entire modal form, including the background -->
+        <div class="cd-user-modal-container">
+            <!--container wrapper -->
+            <ul class="cd-switcher">
+                <li><a href="#0">Sign in</a></li>
+                <li><a href="#0">New account</a></li>
+            </ul>
+            <div id="cd-login">
+                <!-- log in form -->
+                <form class="cd-form" id="signin-form" method="post">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                        <input class="full-width has-padding has-border"
+                               id="signin-email"
+                               name="signinEmail"
+                               type="email" placeholder="E-mail">
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signin-password">Password</label>
+                        <input class="full-width has-padding has-border"
+                               id="signin-password"
+                               name="signinPass"
+                               type="password" placeholder="Password">
+                    </p>
+                    <p class="fieldset">
+                        <input type="checkbox" id="remember-me" checked>
+                        <label for="remember-me">Remember me</label>
+                    </p>
+                    <p class="fieldset">
+                        <input class="full-width" id="loginSubmitBtn" type="submit" value="Login">
+                    </p>
+                </form>
+
+                <p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+                <!-- <a href="#0" class="cd-close-form">Close</a> -->
+
+
+            </div> <!-- cd-login -->
+            <div id="cd-signup">
+
+                <!-- sign up form -->
+                <form class="cd-form" id="signup-form" method="post">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                        <input class="full-width has-padding has-border"
+                               name="signupEmail"
+                               id="signup-email"
+                               type="email" placeholder="E-mail">
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signup-password">Password</label>
+                        <input class="full-width has-padding has-border"
+                               name="signupPass"
+                               id="signup-password"
+                               type="password" placeholder="Password">
+                        <!--<a href="#0" class="hide-password">Hide</a>-->
+                    </p>
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signup-password">Password</label>
+                        <input class="full-width has-padding has-border"
+                               name="confirm_password"
+                               id="repeat-password"
+                               type="password" placeholder="Confirm Password">
+                        <!--<a href="#0" class="hide-password">Hide</a>-->
+                    </p>
+                    <p class="fieldset">
+                        <input type="checkbox" id="accept-terms" name="agree">
+                        <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+                    </p>
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Create account">
+                    </p>
+                </form>
+                <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div> <!-- cd-signup -->
+
+
+            <div id="cd-reset-password">
+                <!-- reset password form -->
+                <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+                <form class="cd-form" id="reset-pass-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                        <input class="full-width has-padding has-border"
+                               id="reset-email"
+                               type="email" placeholder="E-mail">
+                    </p>
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Reset password">
+                    </p>
+                </form>
+                <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+            </div> <!-- cd-reset-password -->
+            <a href="#0" class="cd-close-form">Close</a>
+        </div> <!-- cd-user-modal-container -->
+    </div> <!-- cd-user-modal -->
+
+    <!--SEARCH-->
+    <section class="search_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="img_wrap">
+                    <div class="col-md-8 col-md-offset-2 col-sm-12 col_exp">
+                        <div class="inside_img">
+                            <h1 class="explain">Type an item you looking for and press "Find!"</h1>
+                            <div class="explain_line"></div>
+                            <p>e.g. Bicycle, Tel Aviv</p>
+
+                            <form class="input-group input-group-lg search_form" role="search">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" id="searchBtn" type="button">Find!</button>
+                                </span>
+                            </form><!-- /input-group -->
+                        </div>
+                    </div>
+                    <div class="img_darker">
+                        <img src="img/children-1922.jpg" width="1915" height="806" class="img-responsive" id="children" alt="workItem" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

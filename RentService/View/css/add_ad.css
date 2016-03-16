@@ -1,0 +1,88 @@
+﻿body {
+  font-size: 100%;
+  font-family: "PT Sans", sans-serif;
+  color: #505260;
+  background-color: white;
+}
+label.error {
+    margin-top: 08px;
+    margin-bottom: 18px;
+    color: red;
+    font-style: italic;
+}
+.nav-pills>li.active>a{
+    background-color:#343642;
+}
+
+ #descInfo, #rentInfo, #reachInfo{display:none;}
+
+ /*AD_PILLS*/
+ .ad_pills{
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 30px 40px 30px 0px;
+
+ }
+ .ad_pills > li.active > a, .ad_pills > li.active > a:focus, .ad_pills > li.active > a:hover {
+    color: #fff;
+    background-color: #343642;
+}
+ .ad_pills > li > a{
+     color:#343642;
+ }
+ .ad_pills > li > a:focus, .ad_pills > li > a:hover{
+     color:#000000;
+ }
+
+ /*AD_FORM*/
+ .ad_form{
+     padding: 30px 0px 30px 30px;
+ }
+  #basicInfo > .ad_input, #descInfo > .ad_input, #rentInfo > .ad_input, #reachInfo > .ad_input{
+      padding:20px 20px;
+      font-size: 16px;
+      margin-bottom:15px;
+      border-radius:unset;
+  }
+  #basicInfo > .ad_btn, #descInfo > .ad_btn, #rentInfo > .ad_btn, #btnInsert{
+    color:white;
+    width:100%;
+    background-color:#2f889a;
+    font-size: 24px;
+    padding:13px 20px;
+    border: 1px solid #24626e;
+    border-radius:unset;
+    text-transform: uppercase;
+}
+ #rentInfo > .inp_num{
+     padding:10px 20px 10px 20px;
+     line-height:20px;
+     border: 1px solid #ccc;
+     width:100%;
+ }
+ .p0{
+     padding:0px;
+ }
+ .qq{
+     padding-left:0px;
+ }
+.qq > .ad_input{
+      padding:35px 20px;
+      font-size: 16px;
+      margin-bottom:15px;
+      border-radius:unset;
+      width: 100%;
+      text-align:center;
+}
+.btn_captcha > .ad_btn{
+    color:#ffffff;
+    width:100%;
+    background-color:#2f889a;
+    font-size: 18px;
+    margin-bottom:5px;
+    padding:3px 10px;
+    border: 1px solid #24626e;
+    border-radius:unset;
+    text-transform: none;
+}
