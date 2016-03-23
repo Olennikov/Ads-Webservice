@@ -9,9 +9,9 @@ namespace RentService.Model
     {
         public string user_id { get; set; }
 
-        internal DateTime UserCreated { get; set; }
+        public DateTime UserCreated { get; set; }
 
-        internal string Error { get; set; }
+        public string Error { get; set; }
 
         [DataMember]
         public string UserName { get; set; }

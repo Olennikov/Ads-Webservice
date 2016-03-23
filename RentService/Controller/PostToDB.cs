@@ -36,7 +36,7 @@ namespace RentService.Controller
         public static bool PostAdToDB(Model.Ad ad)
         {
             ad.ad_id = new Helpers.RandomKey().GenerateKey(16);
-            ad.ModifiedDate = DateTime.Now;
+            //ad.ModifiedDate = DateTime.Now;
 
             var checkedAd = new Controller.ValidationServer().AdValidation(ad);
 
@@ -46,7 +46,7 @@ namespace RentService.Controller
             {
                 {"@ad_id", ad.ad_id },
                 {"@ItemName", ad.ItemName },
-                {"@ItemDesc", ad.Description },
+                {"@ItemDesc", ad.ItemDesc },
                 {"@City", ad.City },
                 {"@StartRentDate", ad.StartRentDate },
                 {"@FinishRentDate", ad.FinishRentDate },
@@ -54,7 +54,7 @@ namespace RentService.Controller
                 {"@WeeklyRentPrice", ad.WeeklyRentPrice },
                 {"@MonthlyRentPrice", ad.MonthlyRentPrice },
                 {"@OwnerName", ad.OwnerName },
-                {"@PhoneNum", ad.PhoneNumber },
+                {"@PhoneNum", ad.PhoneNum },
                 {"@ModifiedDate", ad.ModifiedDate }
             });
 

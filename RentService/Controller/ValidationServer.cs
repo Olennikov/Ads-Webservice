@@ -27,24 +27,23 @@ namespace RentService.Controller
             }
         }
 
-        public DateTime startrentdate { get; set; }
-        public DateTime finishrentdate { get; set; }
+        private DateTime startrentdate;
+        private DateTime finishrentdate;
         private DateTime compareToThisDate;
+        private DateTime modifieddate;
 
         public Model.Ad AdValidation(Model.Ad ad)
         {          
             startrentdate = Convert.ToDateTime(ad.StartRentDate);
             finishrentdate = Convert.ToDateTime(ad.FinishRentDate);
+            modifieddate = Convert.ToDateTime(ad.ModifiedDate);
             compareToThisDate = DateTime.Today;
 
             bool flag = true;
 
-            if (string.IsNullOrEmpty(ad.ItemName)  || ad.ItemName.Length < 2 || ad.ItemName.Length > 25)
-            {
-                flag = false;             
-            }
+            if (string.IsNullOrEmpty(ad.ItemName)  || ad.ItemName.Length < 2 || ad.ItemName.Length > 25)          
+                flag = false;                        
                 
-
             if (string.IsNullOrEmpty(ad.City) || ad.City.Length < 2 || ad.City.Length > 25)
                 flag = false;
 
@@ -54,11 +53,12 @@ namespace RentService.Controller
             if (startrentdate < compareToThisDate || finishrentdate < compareToThisDate || startrentdate > finishrentdate)
                 flag = false;
 
+            if(modifieddate < compareToThisDate) flag = false;
 
             if (string.IsNullOrEmpty(ad.OwnerName))
                 flag = false;
 
-            if (string.IsNullOrEmpty(ad.PhoneNumber))
+            if (string.IsNullOrEmpty(ad.PhoneNum))
                 flag = false;
 
             if (flag == false)

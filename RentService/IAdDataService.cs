@@ -8,7 +8,7 @@ using System.Text;
 
 namespace RentService
 {
-    
+
     [ServiceContract]
     public interface IAdDataService
     {
@@ -55,6 +55,14 @@ namespace RentService
            UriTemplate = "verify?token={token}&value={value}")]
 
         Model.VerifyResult Verify(string token, string value);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET",
+                ResponseFormat = WebMessageFormat.Json,
+                BodyStyle = WebMessageBodyStyle.Bare,
+                UriTemplate = "search?query={userInput}")]
+
+        List<Model.Query_Ad> SearchItem(string userInput);
     }
 
 

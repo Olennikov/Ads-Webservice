@@ -10,13 +10,13 @@ function send(url, data, complete) {
         dataType: 'json',
         processdata: false,
         //implementing complete foo
-        success: function (resp) {
-            complete(resp);
-            console.log(resp);
+        success: function (response) {
+            complete(response);
+            console.log(response);
             console.log('succeded!!!');
         },
-        error: function (resp) {
-            console.log(resp);
+        error: function (response) {
+            console.log(response);
             console.log('failed!!!');
         }
     });
@@ -29,10 +29,6 @@ $.validator.methods.email = function (value, element) {
 
 $(document).ready(function () {
 
-    $('#searchBtn').on('click', function () {
-        window.location.replace('http://localhost:50591/View/add_ad.html')
-    })
-
     $('#signup-form').validate({
         submitHandler: function () {
             var user = {
@@ -43,6 +39,10 @@ $(document).ready(function () {
 
             send('http://localhost:50591/AdDataService.svc/post/newUser', user, function () {  //uses ajax to send data
                 //alert("!!!");
+                $('#signup-email').val('');
+                $('#signup-password').val('');
+                $('#repeat-password').val('');
+                $('#accept-terms').attr('checked', false);
             });
         },
 

@@ -6,7 +6,6 @@ $(document).ready(function () {
 
     $.getJSON('http://localhost:50591/AdDataService.svc/check/' + token, function (responce) { 
 
-        console.log(responce);
         if (responce == false) {
             sessionStorage.removeItem('userToken')
             window.location.replace("http://localhost:50591/View/main.html");

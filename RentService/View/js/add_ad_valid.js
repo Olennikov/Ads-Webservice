@@ -58,9 +58,10 @@ $(document).ready(function () {
 
     $.validator.setDefaults({
         submitHandler: function () {
+            var today = new Date().toISOString();
             var ad = {
                 ItemName: $('#txtItemName').val(),
-                Description: $('#txtDesc').val(),
+                ItemDesc: $('#txtDesc').val(),
                 City: $('#txtCity').val(),
                 StartRentDate: $('#txtStartRentDate').val(),
                 FinishRentDate: $('#txtFinishRentDate').val(),
@@ -72,7 +73,8 @@ $(document).ready(function () {
                 CaptchaUserValue: $('#txtUserValue').val(),
                 TokenServ: token,
                 OwnerName: $('#txtOwnerName').val(),
-                PhoneNumber: $('#txtPhoneNumber').val()
+                PhoneNum: $('#txtPhoneNumber').val(),
+                ModifiedDate: today
             };
             console.log(JSON.stringify(ad));
 

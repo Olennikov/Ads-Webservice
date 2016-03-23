@@ -433,5 +433,29 @@ xsigin/signup popup
 .search_form{
     padding:0px 30px 40px 30px;
     opacity:0.7;
+}
 
+/*SEARCH RESULTS*/
+#searchContent{
+    padding-top: 30px;
+}
+
+.price_lbl{
+    position: absolute;
+    margin-top: 219px;
+    margin-left: 0px;
+    font-size: 100%;
+    padding: 7px;
+    border-radius:0;
+    opacity: 0.9;
+}
+.ava_img{
+    position: absolute;
+    width:80px;
+    height:80px;
+    border: 2px solid white;
+    margin: 205px 220px;
+}
+.caption > p{
+    padding-top:5px;
 }

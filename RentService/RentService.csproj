@@ -64,12 +64,14 @@
     <Compile Include="Controller\CaptchaImage.cs" />
     <Compile Include="Controller\Login.cs" />
     <Compile Include="Controller\PostToDB.cs" />
+    <Compile Include="Controller\QueryAds.cs" />
     <Compile Include="Controller\ValidationServer.cs" />
     <Compile Include="Helpers\DB.cs" />
     <Compile Include="Helpers\RandomKey.cs" />
     <Compile Include="IAdDataService.cs" />
     <Compile Include="Model\Ad.cs" />
     <Compile Include="Model\Captcha.cs" />
+    <Compile Include="Model\Query_Ad.cs" />
     <Compile Include="Model\Session.cs" />
     <Compile Include="Model\UserFirstDetalies.cs" />
     <Compile Include="Model\UserNew.cs" />
@@ -94,6 +96,7 @@
     <Content Include="View\client_validation\core.css" />
     <Content Include="View\client_validation\jquery.validate.js" />
     <Content Include="View\client_validation\reset.css" />
+    <Content Include="View\js\showUserQuery.js" />
     <Content Include="View\lib\angular.min.js" />
     <Content Include="View\lib\bootstrap-theme.css" />
     <Content Include="View\lib\bootstrap.min.css" />
@@ -118,6 +121,7 @@
     <Content Include="View\img\cd-logo.svg" />
     <Content Include="View\js\login.js" />
     <Content Include="View\js\main.js" />
+    <Content Include="View\SearchResults.html" />
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>

@@ -7,22 +7,15 @@
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 
     <!--<script src="lib/angular.min.js"></script>-->
-    <script src="lib/jquery-1.11.3.min.js"></script>
-    <script src="lib/bootstrap.min.js"></script>
-    <script src="lib/modernizr.js"></script>
+
     <link href="lib/bootstrap.min.css" rel="stylesheet" />
     <link href="lib/bootstrap-theme.css" rel="stylesheet" />
-   
-    <script src="client_validation/jquery.validate.js"></script>
-    <script src="client_validation/additional-methods.min.js"></script>
-    <link href="client_validation/screen.css" rel="stylesheet" />
 
+    <link href="client_validation/screen.css" rel="stylesheet" />
 
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/main_media.css" rel="stylesheet" />
-    <script src="js/main.js"></script>
-    <script src="js/login.js"></script>
 
     <title>Rent Service</title>
 </head>
@@ -135,7 +128,6 @@
             <a href="#0" class="cd-close-form">Close</a>
         </div> <!-- cd-user-modal-container -->
     </div> <!-- cd-user-modal -->
-
     <!--SEARCH-->
     <section class="search_section">
         <div class="container-fluid">
@@ -145,12 +137,13 @@
                         <div class="inside_img">
                             <h1 class="explain">Type an item you looking for and press "Find!"</h1>
                             <div class="explain_line"></div>
-                            <p>e.g. Bicycle, Tel Aviv</p>
+                            <p>e.g. (for test purpose tipe Mazda, Ski, Green)</p>
 
                             <form class="input-group input-group-lg search_form" role="search">
-                                <input type="text" class="form-control" placeholder="Search for...">
+                                <input type="text" id="userSearchInput" class="form-control" placeholder="Search for...">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default" id="searchBtn" type="button">Find!</button>
+                                    <a href="#res" class="btn btn-default" id="searchBtn" role="button">Find!</a>
+                                    
                                 </span>
                             </form><!-- /input-group -->
                         </div>
@@ -162,6 +155,26 @@
             </div>
         </div>
     </section>
+
+    <section id="searchContent">
+        <div class="container-fluid">
+            <div class="row ad_row">
+
+
+            </div>
+        </div>
+    </section>
+
+    <script src="lib/jquery-1.11.3.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/modernizr.js"></script>
+
+    <script src="client_validation/jquery.validate.js"></script>
+    <script src="client_validation/additional-methods.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/showUserQuery.js"></script>
+
 
 </body>
 </html>

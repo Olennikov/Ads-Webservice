@@ -77,5 +77,10 @@ namespace RentService
 
             return vr;
         }
+
+        public List<Model.Query_Ad> SearchItem(string userInput)
+        {
+            return Controller.QueryAds.UserQuery(userInput.ToLower());
+        }
     }
 }
